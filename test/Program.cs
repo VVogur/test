@@ -34,6 +34,7 @@ namespace testProg
                     Console.WriteLine("Операция неопределена");
                     break;
             }
+            // sometext
             Console.ReadKey();
         }
     }
