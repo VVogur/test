@@ -6,36 +6,26 @@ namespace testProg
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите номер операции: 1.Сложение 2.Вычитание 3.Умножение");
-            int a = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Введите первое число: ");
-            int b = Int32.Parse(Console.ReadLine());
-            Console.WriteLine("Введите второе число: ");
-            int c = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Введите первое число:");
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите второе число:");
+            int num2 = Convert.ToInt32(Console.ReadLine());
 
-            switch (a)
+            do
             {
-                case 1:
-                    Console.WriteLine("Сложение");
-                    a = b + c;
-                    Console.WriteLine($"Сумма двух чисел равна: {a}");
-                    break;
-                case 2:
-                    Console.WriteLine("Вычетание");
-                    a = b - c;
-                    Console.WriteLine($"Сумма двух чисел равна: {a}");
-                    break;
-                case 3:
-                    Console.WriteLine("Умножение");
-                    a = b * c;
-                    Console.WriteLine($"Сумма двух чисел равна: {a}");
-                    break;
-                default:
-                    Console.WriteLine("Операция неопределена");
-                    break;
+                Console.WriteLine($"{num1} * {num2} = {num1 * num2}");
+                break;
+}
+            while (num1 < 0 || num1 > 10 || num2 < 0 || num2 > 10);
+            {
+                if (num1 < 0 || num1 > 10 || num2 < 0 || num2 > 10)
+                { 
+                    Console.WriteLine("Оба числа должны быть в диапазоне от 0 до 10"); 
+                }
+                
+
             }
-            // sometext
-            Console.ReadKey();
+                Console.ReadKey();
         }
     }
 }
